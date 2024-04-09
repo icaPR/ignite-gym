@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "ignite-rn-03-ignite-gym",
-    "slug": "ignite-rn-03-ignite-gym",
+    "name": "ignite-gym",
+    "slug": "ignite-gym",
+    "scheme": "ignite-gym",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,22 +18,29 @@
         {
           "photosPermission": "The app accesses your photos to let you share them with your friends."
         }
+      ],
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "development"
+        }
       ]
     ],
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.icapr.ignitegym"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "permissions": ["android.permission.RECORD_AUDIO"],
+      "package": "com.icapr.ignitegym"
     },
     "web": {
       "favicon": "./assets/favicon.png"
